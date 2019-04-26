@@ -1,0 +1,17 @@
+
+#redis master
+master:
+	image: redis
+	volumes: 
+		- ./redis-5.0.4-master.conf:/usr/local/etc/redis/redis.conf
+	ports:
+		- "6379:6379"
+
+
+#redis slave1
+slave1:
+	image: redis
+	volumes: 
+		- ./redis-5.0.4-slave.conf:/usr/local/etc/redis/redis.conf
+	ports:
+		- "6380:6379"
