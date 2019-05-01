@@ -11,7 +11,7 @@ mysql2:
     image: mysql
     volumes:
         - "./mysql2.cnf:/etc/mysql/my.cnf"
-	- "/opt/mysql/mysql-files:/var/lib/mysql-files"
+        - "/opt/mysql/mysql-files:/var/lib/mysql-files"
     environment:
         MYSQL_ROOT_PASSWORD: 123456
     ports:
