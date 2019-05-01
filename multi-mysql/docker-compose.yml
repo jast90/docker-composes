@@ -2,6 +2,7 @@ mysql1:
     image: mysql
     volumes:
         - "./mysql1.cnf:/etc/mysql/my.cnf"
+        - "/opt/mysql/mysql-files:/var/lib/mysql-files"
     environment:
         MYSQL_ROOT_PASSWORD: 123456
     ports:
@@ -10,6 +11,7 @@ mysql2:
     image: mysql
     volumes:
         - "./mysql2.cnf:/etc/mysql/my.cnf"
+	- "/opt/mysql/mysql-files:/var/lib/mysql-files"
     environment:
         MYSQL_ROOT_PASSWORD: 123456
     ports:
